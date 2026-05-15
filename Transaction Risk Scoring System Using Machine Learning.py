@@ -232,7 +232,10 @@ print(classification_report(y_test, y_pred_rf))
 
 # XGBoost
 
+scale_value = len(y[y == 0]) / len(y[y == 1])
+
 xgb = XGBClassifier(
+    scale_pos_weight=scale_value,
     random_state=42
 )
 
@@ -245,6 +248,8 @@ xgb_acc = accuracy_score(y_test, y_pred_xgb)
 xgb_f1 = f1_score(y_test, y_pred_xgb)
 
 print("XGBoost Accuracy:", xgb_acc)
+
+print("XGBoost F1-Score:", xgb_f1)
 
 print(classification_report(y_test, y_pred_xgb))
 
@@ -328,6 +333,6 @@ print("Median Distance - Fraud:", fraud_distance)
 print("Median Distance - Normal:", normal_distance)
 
 print(
-    "Fraudulent transactions showed higher distance "
-    "from home compared to legitimate transactions."
+    "Distance from home alone was not a strong fraud indicator "
+    "in this dataset."
 )
