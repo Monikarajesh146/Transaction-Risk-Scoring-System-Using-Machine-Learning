@@ -73,15 +73,15 @@ The median transaction distance from home was nearly identical for both fraudule
 
 ### Model Comparison
 
-![Model Comparison](screenshots/model_comparison.png)
+![Model Comparison](model_comparison.png)
 
 ### Feature Importance
 
-![Feature Importance](screenshots/feature_importance.png)
+![Feature Importance](feature_importance.png)
 
 ### Fraud Distribution
 
-![Fraud Distribution](screenshots/fraud_distribution.png)
+![Fraud Distribution](fraud_distribution.png)
 
 ---
 
